@@ -36,7 +36,7 @@ The result will be presented in stages for easy visualization:
 - Stage 4: Checking for Fraudulent Transactions
 
 Sample result using the data provided above:
-> =========================Stage 1=========================<br/>
+>=========================Stage 1=========================<br/>
 Card ID: 3tu2iywy<br/>
 Daily limit: 10000<br/>
 Transaction limit: 800<br/>
@@ -56,13 +56,13 @@ u7s604f0u6bz<br/>
 vzdg2z09t7zp<br/>
 n6lcvjyrhvwt<br/>
 >=========================Stage 4=========================<br/>
-v5buvljyh0lg             IN_BOTH_LIMITS<br/>
-1yuy3noa2uxu             IN_BOTH_LIMITS<br/>
-gl3utnnwxf49             IN_BOTH_LIMITS<br/>
-9mopqy3snk3h             IN_BOTH_LIMITS<br/>
-6hjqaydtmrq5             IN_BOTH_LIMITS<br/>
-mlgtqk8oo74e             OVER_DAILY_LIMIT<br/>
-u7s604f0u6bz             IN_BOTH_LIMITS<br/>
-2siil57yqe5k             OVER_TRANS_LIMIT<br/>
-vzdg2z09t7zp             OVER_BOTH_LIMITS<br/>
-n6lcvjyrhvwt             OVER_TRANS_LIMIT<br/>
+v5buvljyh0lg                IN_BOTH_LIMITS<br/>
+1yuy3noa2uxu             IN_BOTH_LIMITS<br/>
+gl3utnnwxf49              IN_BOTH_LIMITS<br/>
+9mopqy3snk3h           IN_BOTH_LIMITS<br/>
+6hjqaydtmrq5              IN_BOTH_LIMITS<br/>
+mlgtqk8oo74e             OVER_DAILY_LIMIT<br/>
+u7s604f0u6bz             IN_BOTH_LIMITS<br/>
+2siil57yqe5k                OVER_TRANS_LIMIT<br/>
+vzdg2z09t7zp             OVER_BOTH_LIMITS<br/>
+n6lcvjyrhvwt                OVER_TRANS_LIMIT<br/>
