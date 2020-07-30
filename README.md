@@ -25,7 +25,7 @@ u7s604f0u6bz xnwxw8tl 2020:04:22:15:30:43 799<br/>
 vzdg2z09t7zp v0xyil5t 2020:04:29:18:03:00 3489<br/>
 n6lcvjyrhvwt 3tu2iywy 2020:04:29:23:07:00 4592<br/>
 
-The input starts with a list of credit card records sorted by 'card ID'. There are at least 1 and at most 100 cards. Each credit card occupies one line with three fields separated by a single space: unique card ID (8 alphanumeric characters; no uppercase letters), daily limit (the total amount that can be spent in a day; a positive integer), and transaction limit (the amount that can be spent in a transaction; a positive integer). The transaction limit does not exceed the daily limit.
+The input starts with a list of credit card records sorted by `card ID`. There are **at least 1 and at most 100 cards**. Each credit card occupies one line with three fields separated by a single space: `unique card ID` (8 alphanumeric characters; no uppercase letters), `daily limit` (the total amount that can be spent in a day; a positive integer), and `transaction limit` (the amount that can be spent in a transaction; a positive integer). The transaction limit does not exceed the daily limit.
 
 The line “%%%%%%%%%%” indicates the end of credit card records and the start of transactions.
 
