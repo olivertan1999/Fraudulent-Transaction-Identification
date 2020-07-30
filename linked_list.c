@@ -1,5 +1,5 @@
-/*--------------------------------------------------------------------------*/
-/* listops.c declarations (modified) */
+/* listop.c declarations (modified) */ 
+/* credit: Alistair Moffat          */
 
 typedef struct node node_t;
 
