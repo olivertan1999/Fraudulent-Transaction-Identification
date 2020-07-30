@@ -2,25 +2,21 @@
 #include <stdlib.h>
 #include <string.h>
 #include <assert.h>
+#include "linked_list.c"
 
 #define STAGE_NUM_ONE 1                            /* stage numbers */
 #define STAGE_NUM_TWO 2
 #define STAGE_NUM_THREE 3
 #define STAGE_NUM_FOUR 4
-#define STAGE_HEADER_L "=========================" /* stage header format
-                                                      string */
+#define STAGE_HEADER_L "=========================" /* stage header format string */
 
-#define INFO_SEPARATOR ' '                         /* information separator
-                                                      (space) */
-#define END_OF_RECORD "%%%%%%%%%%"                 /* end of credit card
-                                                      records indicator  */
+#define INFO_SEPARATOR ' '                         /* information separator (space) */
+#define END_OF_RECORD "%%%%%%%%%%"                 /* end of credit card records indicator  */
 
 #define MAX_NUM_CARDS 100                          /* maximum number of card */
 
-#define CARD_ID_CHAR 8                             /* number of characters in
-                                                      card id */
-#define TRAN_ID_CHAR 12                            /* number of characters in
-                                                      transaction id */
+#define CARD_ID_CHAR 8                             /* number of characters in card id */
+#define TRAN_ID_CHAR 12                            /* number of characters in transaction id */
 
 #define TRUE 1                                     /* true */
 #define FALSE 0                                    /* false */
@@ -324,7 +320,8 @@ record_and_check(list_t *list, credit_card_t credit_card_list[],
             ptr_id->daily_tran_amount += A->tran_data.amount;
             
         } else {
-            /* otherwise replace the date and amount of last transaction of the credit card with the date and amount of this transaction */
+            /* otherwise replace the date and amount of last transaction of 
+               the credit card with the date and amount of this transaction */
             ptr_id->last_tran = A->tran_data.date;
             ptr_id->daily_tran_amount = A->tran_data.amount;
         }
