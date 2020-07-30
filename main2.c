@@ -52,7 +52,8 @@ typedef struct {
 } transaction_t;
 
 /*--------------------------------------------------------------------------*/
-/* listops.c declarations (modified) */
+/* Linked-list codes declarations (modified) */
+/* credit: Alistair Moffat's program "listop.c" */
 
 /* contains information about data in the node and the pointer to the next
    node*/
@@ -448,7 +449,7 @@ compare_card_id(const void *card_id1, const void *card_id2) {
 }
 
 /*--------------------------------------------------------------------------*/
-/* listops skeleton codes from lecture slide (modified) */
+/* listops.c linked-list skeleton codes from lecture slide (modified) */
 
 /* create an empty linked-list */
 list_t
