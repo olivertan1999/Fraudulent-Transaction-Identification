@@ -36,15 +36,17 @@ The result will be presented in stages for easy visualization:
 - Stage 4: Checking for Fraudulent Transactions
 
 Sample result using the data provided above:
->=========================Stage 1=========================<br/><br/>
+>=========================Stage 1=========================<br/>
 Card ID: 3tu2iywy<br/>
 Daily limit: 10000<br/>
 Transaction limit: 800<br/>
->=========================Stage 2=========================<br/><br/>
+<br/>
+>=========================Stage 2=========================<br/>
 Number of credit cards: 5<br/>
 Average daily limit: 4030.00<br/>
 Card with the largest transaction limit: 3tu2iywy<br/>
->=========================Stage 3=========================<br/><br/>
+<br/>
+>=========================Stage 3=========================<br/>
 v5buvljyh0lg<br/>
 1yuy3noa2uxu<br/>
 gl3utnnwxf49<br/>
@@ -55,7 +57,8 @@ u7s604f0u6bz<br/>
 2siil57yqe5k<br/>
 vzdg2z09t7zp<br/>
 n6lcvjyrhvwt<br/>
->=========================Stage 4=========================<br/><br/>
+<br/>
+>=========================Stage 4=========================<br/>
 v5buvljyh0lg                IN_BOTH_LIMITS<br/>
 1yuy3noa2uxu             IN_BOTH_LIMITS<br/>
 gl3utnnwxf49              IN_BOTH_LIMITS<br/>
@@ -66,3 +69,4 @@ u7s604f0u6bz             IN_BOTH_LIMITS<br/>
 2siil57yqe5k                OVER_TRANS_LIMIT<br/>
 vzdg2z09t7zp             OVER_BOTH_LIMITS<br/>
 n6lcvjyrhvwt                OVER_TRANS_LIMIT<br/>
+<br/>
