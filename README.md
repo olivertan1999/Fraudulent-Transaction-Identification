@@ -28,3 +28,41 @@ The input starts with a list of credit card records sorted by `card ID`. There a
 The line “%%%%%%%%%%” indicates the end of credit card records and the start of transactions.
 
 The transactions are sorted by `date` and `time`. Each transaction occupies one line with four fields separated by a single space: unique `transaction ID` (12 alphanumeric characters; no uppercase letters), `card ID` (8 alphanumeric characters; no uppercase letters; must have appeared in the card records), transaction `date` and `time` (with format year:month:day:hour:minute:second, two digits for each component), and `transaction amount` (a positive integer, for simplicity). There is no given limit on the number of transaction lines.
+
+The result will be presented in stages for easy visualization: 
+- Stage 1: Reading One Credit Card Record
+- Stage 2: Reading All Credit Card Records
+- Stage 3: Reading the Transactions
+- Stage 4: Checking for Fraudulent Transactions
+
+Sample result using the data provided above:
+> =========================Stage 1=========================<br/>
+Card ID: 3tu2iywy<br/>
+Daily limit: 10000<br/>
+Transaction limit: 800<br/>
+>=========================Stage 2=========================<br/>
+Number of credit cards: 5<br/>
+Average daily limit: 4030.00<br/>
+Card with the largest transaction limit: 3tu2iywy<br/>
+>=========================Stage 3=========================<br/>
+v5buvljyh0lg<br/>
+1yuy3noa2uxu<br/>
+gl3utnnwxf49<br/>
+9mopqy3snk3h<br/>
+6hjqaydtmrq5<br/>
+mlgtqk8oo74e<br/>
+u7s604f0u6bz<br/>
+2siil57yqe5k<br/>
+vzdg2z09t7zp<br/>
+n6lcvjyrhvwt<br/>
+>=========================Stage 4=========================<br/>
+v5buvljyh0lg             IN_BOTH_LIMITS<br/>
+1yuy3noa2uxu             IN_BOTH_LIMITS<br/>
+gl3utnnwxf49             IN_BOTH_LIMITS<br/>
+9mopqy3snk3h             IN_BOTH_LIMITS<br/>
+6hjqaydtmrq5             IN_BOTH_LIMITS<br/>
+mlgtqk8oo74e             OVER_DAILY_LIMIT<br/>
+u7s604f0u6bz             IN_BOTH_LIMITS<br/>
+2siil57yqe5k             OVER_TRANS_LIMIT<br/>
+vzdg2z09t7zp             OVER_BOTH_LIMITS<br/>
+n6lcvjyrhvwt             OVER_TRANS_LIMIT<br/>
