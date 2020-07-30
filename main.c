@@ -1,12 +1,3 @@
-/*  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
-/*  Foundation of Algorithm Assignment 2                                    */
-/*  (Fraudulent Transaction Identification)                                 */
-/*  Developed by: Oliver Ming Hui Tan                                       */
-/*  Student id: 1087948                                                     */
-/*  Algorithms are fun!                                                     */
-/*                                                                          */
-/*  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -60,50 +51,23 @@ typedef struct {
     int amount;
 } transaction_t;
 
-/*--------------------------------------------------------------------------*/
-/* listops.c declarations (modified) */
-typedef struct node node_t;
-
-struct node {
-    transaction_t tran_data;
-    node_t *next;
-};
-
-typedef struct {
-    node_t *head;
-    node_t *foot;
-} list_t;
-
-/* listops.c function prototypes (modified) */
-list_t *make_empty_list(void);
-int is_empty_list(list_t *list);
-void free_list(list_t *list);
-list_t *insert_at_head(list_t *list, transaction_t tran_data);
-list_t *insert_at_foot(list_t *list, transaction_t tran_data);
-transaction_t get_head(list_t *list);
-list_t *get_tail(list_t *list);
-/*--------------------------------------------------------------------------*/
-
 /* function prototypes */
 void print_stage_header(int stage_num);
 void stage_one(credit_card_t *one_credit_card);
 void stage_two(credit_card_t credit_card_list[], int *num_credit_cards);
 void stage_three(list_t *list);
-void stage_four(list_t *list, credit_card_t credit_card_list[],
-                int num_credit_cards);
+void stage_four(list_t *list, credit_card_t credit_card_list[], int num_credit_cards);
 
 int read_one_record(credit_card_t *credit_card);
-double avg_daily_limit(credit_card_t credit_card_list[],
-                       int *num_credit_cards);
-char* largest_tran_lim(credit_card_t credit_card_list[],
-                       int *num_credit_cards);
-int compare_id(credit_card_t credit_card_list[], int id_index_1,
-               int id_index_2);
+double avg_daily_limit(credit_card_t credit_card_list[], int *num_credit_cards);
+char* largest_tran_lim(credit_card_t credit_card_list[], int *num_credit_cards);
+int compare_id(credit_card_t credit_card_list[], int id_index_1, int id_index_2);
 transaction_t *read_one_transaction(void);
-void record_and_check(list_t *list, credit_card_t credit_card_list[], int                               num_credit_cards);
+void record_and_check(list_t *list, credit_card_t credit_card_list[], int num_credit_cards);
 int compare_card_id(const void *card_id1, const void *card_id2);
-/*--------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------*/
 
+/* Main function */
 int
 main(int argc, char *argv[]) {
     /* to hold all input credit cards */
@@ -401,90 +365,4 @@ int
 compare_card_id(const void *card_id1, const void *card_id2) {
     return strncmp(card_id1, ((const credit_card_t *)card_id2)->card_id,
                    sizeof(((credit_card_t *)0)->card_id));
-}
-
-
-
-
-//---------------------------------------------------------------------------//
-/* listops skeleton codes from lecture slide */
-
-list_t
-*make_empty_list(void) {
-    list_t *list;
-    list = (list_t*)malloc(sizeof(*list));
-    assert(list!=NULL);
-    list->head = list->foot = NULL;
-    return list;
-}
-
-int
-is_empty_list(list_t *list) {
-    assert(list!=NULL);
-    return list->head==NULL;
-}
-
-void
-free_list(list_t *list) {
-    node_t *curr, *prev;
-    assert(list!=NULL);
-    curr = list->head;
-    while (curr) {
-        prev = curr;
-        curr = curr->next;
-        free(prev);
-    }
-    free(list);
-}
-
-list_t
-*insert_at_head(list_t *list, transaction_t tran_data) {
-    node_t *new;
-    new = (node_t*)malloc(sizeof(*new));
-    assert(list!=NULL && new!=NULL);
-    new->tran_data = tran_data;
-    new->next = list->head;
-    list->head = new;
-    if (list->foot==NULL) {
-        /* this is the first insertion into the list */
-        list->foot = new;
-    }
-    return list;
-}
-
-list_t
-*insert_at_foot(list_t *list, transaction_t tran_data) {
-    node_t *new;
-    new = (node_t*)malloc(sizeof(*new));
-    assert(list!=NULL && new!=NULL);
-    new->tran_data = tran_data;
-    new->next = NULL;
-    if (list->foot==NULL) {
-        /* this is the first insertion into the list */
-        list->head = list->foot = new;
-    } else {
-        list->foot->next = new;
-        list->foot = new;
-    }
-    return list;
-}
-
-transaction_t
-get_head(list_t *list) {
-    assert(list!=NULL && list->head!=NULL);
-    return list->head->tran_data;
-}
-
-list_t
-*get_tail(list_t *list) {
-    node_t *oldhead;
-    assert(list!=NULL && list->head!=NULL);
-    oldhead = list->head;
-    list->head = list->head->next;
-    if (list->head==NULL) {
-        /* the only list node just got deleted */
-        list->foot = NULL;
-    }
-    free(oldhead);
-    return list;
 }
