@@ -4,9 +4,9 @@ This is my coursework project written in C to process credit card and transactio
 
 ![Image of Fraud](https://github.com/olivertan1999/fraudulent_transaction_identification/blob/master/Fraud-cash.jpg)
 
-#### There are around 16 million credit cards on issue in Australia, and the number is over 1 billion worldwide. This is a goldmine for cybercriminals who make unauthorised payment to obtain goods or services (i.e.,credit card fraud). Worldwide losses from card fraud is expected to reach US$31 billion in 2020. Banks and card companies are strongly motivated to develop anti-fraud technologies. They prevented two-thirds of the attempted card fraud in the UK in 2018,4 but this is a never-ending battle.
+There are around 16 million credit cards on issue in Australia, and the number is over 1 billion worldwide. This is a goldmine for cybercriminals who make unauthorised payment to obtain goods or services (i.e.,credit card fraud). Worldwide losses from card fraud is expected to reach US$31 billion in 2020. Banks and card companies are strongly motivated to develop anti-fraud technologies. They prevented two-thirds of the attempted card fraud in the UK in 2018,4 but this is a never-ending battle.
 
-#### This program serves the purpose of processing credit card and transaction records and identify fraudulent transactions. List of credit card records and transactions to be processed should be in the following format.
+This program serves the purpose of **processing credit card and transaction records and identify fraudulent transactions**. List of credit card records and transactions to be processed should be in the following format.
 
 > 3tu2iywy 10000 800<br/> 
 ceww0p66 150 100<br/>
