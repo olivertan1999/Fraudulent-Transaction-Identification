@@ -1,13 +1,3 @@
-/*  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
-/*  Foundation of Algorithm Assignment 2                                    */
-/*  (Fraudulent Transaction Identification)                                 */
-/*  Developed by: Oliver Ming Hui Tan                                       */
-/*  With the help of: listop.c program written by Alistair Moffat           */
-/*  Student id: 1087948                                                     */
-/*  Algorithms are fun!                                                     */
-/*                                                                          */
-/*  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
